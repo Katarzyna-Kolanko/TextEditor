@@ -1,17 +1,20 @@
 Prosty edytor tekstu w OpenGL (pygame +
 PyOpenGL)
-1. Cel i opis projektu
+1. Cel i opis projektu:
+   
 Projekt to samodzielny edytor tekstu/kodu napisany w Pythonie, w którym cała warstwa graficzna (okno, tekst,
 kursor, pasek narzędzi, scrollbar) jest rysowana ręcznie przy użyciu OpenGL, a pygame odpowiada za okno,
 zdarzenia klawiatury/myszy oraz renderowanie tekstu do tekstur.
 
-2. Wymagania i uruchomienie
+2. Wymagania i uruchomienie:
+   
 Wymagane biblioteki:
 pip install pygame PyOpenGL PyOpenGL_accelerate
 Uruchomienie (opcjonalnie ze ścieżką do pliku do otwarcia):
 python texteditor.py [ścieżka_do_pliku]
 
 3. Architektura kodu
+   
 Kod jest podzielony na kilka logicznych części:
 • highlight_line() i wyrażenie regularne TOKEN_REGEX – proste kolorowanie składni: słowa kluczowe,
 wbudowane funkcje/nazwy, stringi, komentarze, liczby i operatory otrzymują osobne kolory.
@@ -26,6 +29,7 @@ scrollbar, pasek wyszukiwania) i obsługują kliknięcia w przyciski paska narz�
 myszy, zmiana rozmiaru okna) i wywoływanie odpowiednich metod klasy Editor.
 
 4. Funkcjonalności
+   
 • Kolorowanie składni w stylu Pythona.
 • Edycja tekstu: wpisywanie, Backspace/Delete, Enter, Tab.
 • Zaznaczanie: myszą, klawiaturą (Shift + strzałki), Ctrl+A
